@@ -9,6 +9,20 @@ Run the development server:
 It listens on `http://127.0.0.1:5000`. Configure `SUPABASE_URL` and
 `SUPABASE_PUBLISHABLE_KEY` in `.env` before running it.
 
+## Frontend
+
+The Flask app serves the compiled portal from `frontend/dist`, so start the
+backend and open **http://127.0.0.1:5000** in a browser. Do not open
+`frontend/index.html` directly from the file system.
+
+After frontend changes, rebuild it once:
+
+```powershell
+cd ..\frontend
+npm install
+npm run build
+```
+
 ## Endpoints
 
 | Method | Endpoint | Body / query | Result |
